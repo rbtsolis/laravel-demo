@@ -19,6 +19,10 @@ Route::resource('students', 'StudentController');
 Route::resource('books', 'BookController');
 Route::resource('careers', 'CareerController');
 
+
+Route::resource('api/students/', 'ApiStudentController');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
