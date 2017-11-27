@@ -54,6 +54,8 @@
 $(function () {
   $('#search-name').on('keypress', function () {
 
+    $('#students-result').html('');
+
     if (this.value != '') {
       $.ajax({
         url : '/api/students/?first_name=' + this.value,
