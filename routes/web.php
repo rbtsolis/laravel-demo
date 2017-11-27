@@ -20,7 +20,7 @@ Route::resource('books', 'BookController');
 Route::resource('careers', 'CareerController');
 
 
-Route::resource('api/students/', 'ApiStudentController');
+Route::resource('api/students', 'ApiStudentController');
 
 
 Auth::routes();
