@@ -40,7 +40,13 @@ class ApiStudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $student = new Student();
+        $student -> id_card    = $request -> id_card;
+        $student -> first_name = $request -> first_name;
+        $student -> last_name  = $request -> last_name;
+        $student -> career_id  = $request -> career_id;
+        $student -> save();
+        echo $student;
     }
 
     /**
@@ -51,7 +57,8 @@ class ApiStudentController extends Controller
      */
     public function show($id)
     {
-        //
+        $student = Student::FindOrFail($id);
+        echo $student;
     }
 
     /**
