@@ -8,6 +8,14 @@ use App\Student;
 
 class StudentController extends Controller
 {
+
+    /*
+    public function __construct()
+    {
+        $this -> middleware('auth');
+    }
+    */
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +37,11 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        $careers = Career::all();
+        $data = [
+            'careers' => $careers
+        ];
+        return view('students.create', $data);
     }
 
     /**
